@@ -49,10 +49,10 @@ def guardarCiudad():
     # redireccionar a la vista ciudades 
     return redirect(url_for('ciudades_index'))
 
-@app.route('/ciudades-editar/<id>')
+@app.route('/ciudades_editar/<id>')
 def ciudadesEditar(id):
     ciudaddao = CiudadDao()
-    return render_template('ciudades editar.html', ciudad=ciudaddao.getCiudadById(id))
+    return render_template('ciudades_editar.html', ciudad=ciudaddao.getCiudadById(id))
 
 @app.route('/actualizar-ciudad', methods=['POST'])
 def actualizarCiudad():
